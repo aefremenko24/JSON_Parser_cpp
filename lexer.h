@@ -8,12 +8,14 @@
 #include <string>
 #include <vector>
 
-union LexToken {
-    char c;
-    float f;
-    std::string s;
-};
+std::string lex_string(std::string &s);
 
-std::pmr::vector<LexToken> lex(std::string &s);
+std::string lex_number(std::string &s);
+
+std::string lex_bool(std::string &s);
+
+std::string lex_null(std::string &s);
+
+std::vector<std::string> lex(std::string &s);
 
 #endif //LEXER_H
